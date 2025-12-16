@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+        /* Paleta de Colores */
+        :root {
+            --color-morado: #a020f0; 
+            --color-blanco: #ffffff; 
+            --color-fondo-tarjeta: rgba(10, 5, 20, 0.75);
+            --color-borde: rgba(160, 32, 240, 0.5); 
+            --color-sombra-suave: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilos Bñbase */
+        body, html {
+            background-color: transparent;
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            color: var(--color-blanco);
+            text-shadow: 0 1px 3px var(--color-sombra-suave);
+            
+            margin: 0;
+            padding: 30px;
+            overflow: hidden;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        /* Tarjeta para cada tipo de Dolar */
+        .dolar-card {
+            flex: 1; 
+            min-width: 620px;
+            
+            background-color: var(--color-fondo-tarjeta);
+            border-radius: 10px;
+            padding: 20px 25px;
+            
+            border: 1px solid var(--color-borde);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.2s ease-in-out;
+        }
+        
+        /* Animación de actualización */
+        .dolar-card.updated {
+            border-color: var(--color-morado);
+            box-shadow: 0 0 20px var(--color-morado);
+            transform: scale(1.02);
+        }
+
+        /*  Título */
+        .dolar-card h2 {
+            margin: 0 0 15px 0;
+            padding: 0 0 10px 0;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--color-morado);
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid var(--color-borde);
+        }
+
+        /* Contenedor de Valores */
+        .valores {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .valores div {
+            flex: 1;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 15px 10px;
+            border-radius: 6px;
+        }
+
+        /* Etiquetas */
+        .valores .label {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--color-blanco);
+            opacity: 0.8;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        /* Precio */
+        .valores .precio {
+            font-size: 2.5rem; 
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--color-blanco);
+            text-shadow: 0 0 8px rgba(255,255,255,0.2);
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        /* Estado de carga o error */
+        .loading-text, .error-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            opacity: 0.8;
+            padding: 20px 0;
+        }
+        .error-text {
+            color: #ff6b6b;
+        }
