@@ -2,7 +2,7 @@
 
 Widget en tiempo real que muestra las cotizaciones del **Dólar Oficial** y **Dólar Blue** en Argentina, diseñado específicamente para ser importado como overlay o input transparente en **vMix** u **OBS Studio**.
 
-## Ultima Actualización: 03/11/25
+### Ultima Actualización: 03/11/25
 
 ## Características
 
@@ -90,6 +90,6 @@ Este proyecto utiliza la API pública de **[DolarApi.com](https://dolarapi.com)*
 - Requiere conexión a internet para funcionar.
 - Los valores mostrados dependen de la disponibilidad de la API externa.
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto está bajo la Licencia MIT.
